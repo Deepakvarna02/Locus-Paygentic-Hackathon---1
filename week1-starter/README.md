@@ -1,23 +1,51 @@
-# Locus Paygentic Week 1 - Invoice Payment Agent
+# 🚀 Paygentic Invoice Payment Agent
 
-Submission-ready CLI project for Locus Paygentic Hackathon Week 1.
+**Locus Paygentic Hackathon - Week 1 Submission**
 
-This app demonstrates:
-- wallet verification and balance checks
-- credits request flow
-- USDC payout to wallet addresses
-- USDC payout via email escrow
-- approval-aware transaction handling
-- transaction polling until final state
-- end-to-end invoice settlement flow
-- wrapped API discovery and invocation
+> **Autonomously settle invoices in USDC through Locus and get policy-aware transaction proof.**
 
-## 1) Prerequisites
+## The Problem
+Freelancers and small teams manually manage invoice payouts across multiple recipients. This is slow, error-prone, and impossible to audit at scale.
+
+## The Solution
+A CLI-first payment agent that validates inputs, executes USDC transfers via Locus, handles approval policies, and provides auditable transaction proof—**all in one command**.
+
+## What This Proves
+✅ **Real Locus API Usage** - Live USDC transactions on Base chain  
+✅ **Policy Guardrails** - Approval URL handling for threshold controls  
+✅ **Audit Trail** - Transaction polling to final state with proof  
+✅ **B2B Use Case** - Clear monetization path as payout automation SaaS  
+✅ **Bonus Breadth** - Wrapped API ecosystem integration  
+
+## Core Capabilities
+- 🔐 Wallet verification and live USDC balance checks
+- 💳 USDC payout to wallet addresses (EVM)
+- 📧 USDC payout via email escrow
+- ✅ Approval URL handling for policy thresholds
+- 📊 Transaction polling until final state
+- 🎯 End-to-end invoice settlement flow
+- 🔌 Wrapped API discovery and invocation
+
+## 1) Quick Start (60 seconds)
+
+```powershell
+cd week1-starter
+$env:LOCUS_API_KEY = "claw_your_key_here"
+npm install
+npm run verify
+npm run balance
+npm run invoice-flow -- email recipient@example.com 0.10 "Invoice #1002"
+npm run transactions -- 5
+```
+
+**That's it!** Your invoice was sent. Proof is displayed. ✅
+
+## 2) Prerequisites
 
 - Node.js 18+
 - A Locus API key (starts with `claw_`)
 
-## 2) Set environment (PowerShell)
+## 3) Set environment (PowerShell)
 
 ```powershell
 $env:LOCUS_API_KEY = "claw_your_key_here"
@@ -37,7 +65,7 @@ Alternative auth (no env var): save `~/.config/locus/credentials.json`
 }
 ```
 
-## 3) Quick verify
+## 4) Quick verify
 
 ```powershell
 npm run verify
@@ -46,7 +74,7 @@ npm run ready-check
 
 If this succeeds, your wallet and key are ready.
 
-## 4) Command reference
+## 5) Command reference
 
 ```powershell
 npm run verify
@@ -82,7 +110,7 @@ Evidence notes:
 - Use `export-proof` to generate a markdown report with live API responses for submission backup.
 - Use `submission-check` to get a READY/NOT_READY report before final Devfolio submit.
 
-## 5) Safe demo flow for judges
+## 6) Safe demo flow for judges
 
 1. `npm run verify`
 2. `npm run balance`
@@ -107,15 +135,35 @@ For address-based transfer:
 2. If returned with `approval_url`, approve from browser.
 3. `npm run poll -- TRANSACTION_ID 30 2`
 
-## 6) Security notes
+## 7) Security notes
 
 - Never print or share your full `LOCUS_API_KEY`.
 - Send your key only to `beta-api.paywithlocus.com`.
 - Start with small payment amounts for demos.
 - Validate recipient addresses before sending real funds.
 
-## 7) Submission assets
+## 8) Submission Assets & Winning Materials
 
-- Architecture overview: `ARCHITECTURE.md`
-- 2-minute demo script: `DEMO_SCRIPT.md`
-- Submission copy: `SUBMISSION_SUMMARY.md`
+### Documentation
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - Full technical design and reliability approach
+- **[DEMO_SCRIPT.md](DEMO_SCRIPT.md)** - 2-minute demo walkthrough for judges
+- **[DEVFOLIO_COPY.md](DEVFOLIO_COPY.md)** - Polished submission text (copy-paste ready)
+- **[FINAL_CHECKLIST.md](FINAL_CHECKLIST.md)** - Pre-submission quality checklist
+
+### Proof Reports
+- **[reports/proof-final.md](reports/proof-final.md)** - Real transaction execution evidence
+- **[reports/submission-check-final.md](reports/submission-check-final.md)** - Readiness verification
+
+### Key Submission Points
+1. **Real Payments** - Live USDC transactions on Base chain (not mock)
+2. **Policy Handling** - Approval URL flow for threshold protection
+3. **Proof Generation** - Transaction polling with auditable status trail
+4. **Business Value** - Clear B2B use case with SaaS monetization path
+5. **API Breadth** - Optional wrapped API integration showcase
+
+## Repository
+📍 **GitHub**: https://github.com/Deepakvarna02/Locus-Paygentic-Hackathon---1
+
+---
+
+**Ready to submit!** Follow [DEMO_SCRIPT.md](DEMO_SCRIPT.md) and use [DEVFOLIO_COPY.md](DEVFOLIO_COPY.md) for Devfolio submission.
