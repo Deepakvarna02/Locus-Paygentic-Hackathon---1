@@ -1,0 +1,29 @@
+{
+  "name": "locus-week1-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Week 1 starter for Locus Paygentic Hackathon",
+  "type": "module",
+  "scripts": {
+    "verify": "node app.mjs verify",
+    "ready-check": "node app.mjs ready-check",
+    "balance": "node app.mjs balance",
+    "request-credits": "node app.mjs request-credits",
+    "credits-status": "node app.mjs credits-status",
+    "wait-credits": "node app.mjs wait-credits",
+    "transactions": "node app.mjs transactions",
+    "send": "node app.mjs send",
+    "send-email": "node app.mjs send-email",
+    "poll": "node app.mjs poll",
+    "invoice-flow": "node app.mjs invoice-flow",
+    "demo-run": "node app.mjs demo-run",
+    "autopilot": "node app.mjs autopilot",
+    "autopilot-safe": "node app.mjs autopilot-safe",
+    "funding-help": "node app.mjs funding-help",
+    "wrapped-index": "node app.mjs wrapped-index",
+    "wrapped-call": "node app.mjs wrapped-call",
+    "wrapped-call-file": "node app.mjs wrapped-call-file",
+    "export-proof": "node app.mjs export-proof",
+    "submission-check": "node app.mjs submission-check"
+  }
+}
